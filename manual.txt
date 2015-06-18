@@ -1,0 +1,14 @@
+In The Dependencies folder: All the jars will be needed.
+There is a file called 'model.20120919', this is used for ARK-NLP, so it needs to be in the same directory as the project.
+
+Compile all the classes.
+The main function is located in "TwitterRest.java", so run that one.
+
+There are extra files that start with "User_", "nlp_", "ngram_", and "dbpedia_". These can be included in the same folder also, to help speed up the DBPedia queries to save time.
+
+When running the project, the gui will show up.
+The top will show the Twitter API calls remaining, make sure to stay within the limit before it refreshes.
+Enter a twitter username, **Reminder: They must be public so that the program can access the tweets
+Click Submit, and the data will load.
+Then, click Next, and DBPedia will be queried to get coordinates. This will take a long time. Instead of waiting so long, you can just stop the program.
+If you stop the program during DBPedia querying, the file will remain, so now if you click "Next", it will use that file and save time, however it will be incomplete.

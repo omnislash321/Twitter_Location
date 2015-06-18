@@ -1,0 +1,28 @@
+Two folders:
+
+"dependencies"
+and 
+"source code"
+
+First, go inside "dependencies" and take out the file "model.20120919" and copy it inside the "source code" folder.
+
+Then, compile with these commands, assuming you are inside the "source code" folder. ie /desktop/twitter location/source code and the "dependencies" folder is outside.
+
+javac -cp ";../dependencies/*" Coord.java
+javac -cp ";../dependencies/*" Cluster.java
+javac -cp ";../dependencies/*" TwitObj.java
+javac -cp ";../dependencies/*" KCenterClustering.java
+javac -cp ";../dependencies/*" swingGui.java
+javac -cp ";../dependencies/*" TwitterRest.java
+
+Then, all the files are completed compiling.
+
+Now, run the program with:
+java -cp ";../dependencies/*" TwitterRest
+
+When running the project, the gui will show up.
+The top will show the Twitter API calls remaining, make sure to stay within the limit before it refreshes.
+Enter a twitter username, **Reminder: They must be public so that the program can access the tweets
+Click Submit, and the data will load.
+Then, click Next, and DBPedia will be queried to get coordinates. This will take a long time. Instead of waiting so long, you can just stop the program.
+If you stop the program during DBPedia querying, the file will remain, so now if you click "Next", it will use that file and save time, however it will be incomplete.
